@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self' https://appsforoffice.microsoft.com https://localhost:3000;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://appsforoffice.microsoft.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: https://localhost:3000;
+        font-src 'self' data: https://localhost:3000;
+        connect-src 'self' http://localhost:8000 https://localhost:3000 ws://localhost:3000 wss://localhost:3000;
+        frame-ancestors 'self' https://*.officeapps.live.com https://*.office.com https://excel.cloud.microsoft;
+      "
+    />
+    <title>Acuity MVP</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <script type="module" crossorigin src="/assets/index-B7ah0zwB.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CfqWMTPc.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  </html>

@@ -1,0 +1,140 @@
+factors:
+  fed_policy:
+    description: Expected direction of Federal Reserve policy and rate path.
+    direct_keywords:
+      - fed
+      - fomc
+      - interest rate
+      - rate cut
+      - rate hike
+      - federal reserve
+    direct_patterns:
+      - "\\bfed\\b.*\\bcut\\b"
+      - "\\bfed\\b.*\\bhike\\b"
+      - "\\bfomc\\b"
+    proxy_keywords:
+      - treasury yield
+      - 10-year yield
+      - bond market
+    proxy_patterns:
+      - "\\byield(s)?\\b"
+  inflation_stickiness:
+    description: Persistence of inflation in CPI, PCE, wages, and shelter.
+    direct_keywords:
+      - cpi
+      - pce
+      - inflation
+      - core inflation
+      - shelter inflation
+    direct_patterns:
+      - "\\bcpi\\b.*\\babove\\b"
+      - "\\binflation\\b.*\\bhot\\b"
+    proxy_keywords:
+      - wages
+      - labor costs
+      - rent
+    proxy_patterns:
+      - "\\bwage(s)?\\b"
+  recession_risk:
+    description: Probability of contraction, earnings slowdown, or macro demand weakness.
+    direct_keywords:
+      - recession
+      - gdp contraction
+      - hard landing
+      - unemployment spike
+    direct_patterns:
+      - "\\brecession\\b"
+      - "\\bgdp\\b.*\\bnegative\\b"
+    proxy_keywords:
+      - layoffs
+      - consumer slowdown
+      - pmi below
+    proxy_patterns:
+      - "\\bpmi\\b"
+  credit_stress:
+    description: Tightening in credit spreads, defaults, refinancing conditions, and bank stress.
+    direct_keywords:
+      - credit spread
+      - default rate
+      - high yield
+      - leveraged loan
+      - bank stress
+    direct_patterns:
+      - "\\bdefault(s)?\\b"
+      - "\\bspread(s)?\\b"
+    proxy_keywords:
+      - regional bank
+      - refinancing
+      - bankruptcy
+    proxy_patterns:
+      - "\\bbank\\b.*\\bstress\\b"
+  usd_strength:
+    description: Dollar strength affecting imports, exports, and cross-border financing.
+    direct_keywords:
+      - us dollar
+      - dollar index
+      - dxy
+      - usd
+    direct_patterns:
+      - "\\bdxy\\b"
+      - "\\busd\\b.*\\bstrong\\b"
+    proxy_keywords:
+      - fx
+      - eurusd
+      - usdjpy
+    proxy_patterns:
+      - "\\bfx\\b"
+  oil_shock:
+    description: Energy price shocks that can pressure margins and inflation.
+    direct_keywords:
+      - oil
+      - crude
+      - brent
+      - wti
+      - gasoline
+    direct_patterns:
+      - "\\boil\\b.*\\babove\\b"
+      - "\\bbrent\\b"
+      - "\\bwti\\b"
+    proxy_keywords:
+      - opec
+      - refinery
+      - energy shock
+    proxy_patterns:
+      - "\\bopec\\b"
+  geopolitical_risk:
+    description: Political conflict, elections, sanctions, and instability affecting capital markets.
+    direct_keywords:
+      - sanctions
+      - war
+      - invasion
+      - conflict
+      - taiwan
+      - middle east
+    direct_patterns:
+      - "\\bwar\\b"
+      - "\\bconflict\\b"
+    proxy_keywords:
+      - election
+      - parliament
+      - president
+      - congress
+    proxy_patterns:
+      - "\\belection\\b"
+  exit_multiple_compression:
+    description: Downside to exit valuation multiples from rates, sentiment, or sector de-rating.
+    direct_keywords:
+      - exit multiple
+      - valuation multiple
+      - ev/ebitda
+      - multiple compression
+      - derating
+    direct_patterns:
+      - "\\bmultiple\\b.*\\bcompression\\b"
+      - "\\bev/ebitda\\b"
+    proxy_keywords:
+      - valuation
+      - growth stocks
+      - market multiple
+    proxy_patterns:
+      - "\\bvaluation\\b"
